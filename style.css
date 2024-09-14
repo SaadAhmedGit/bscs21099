@@ -7,9 +7,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 0;
+  height: 100%;
+  min-height: 3em;
   background-color: #333;
   color: #fff;
+}
+
+.menu > div:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  height: inherit;
+}
+
+.menu > div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 1;
+}
+.menu {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  padding: 0;
 }
 
 .menu a {
@@ -30,6 +51,7 @@ body {
 
   .menu.active {
     display: flex;
+    gap: 1em;
   }
 
   .toggle {

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #333;
+  color: #fff;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1em;
+}
+
+.toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+  }
+}

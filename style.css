@@ -67,12 +67,18 @@ body {
   width: full;
   height: 100%;
   overflow:hidden;
-  min-height: 3em;
-  border-bottom: 1px outset var(--accent);
+  min-height: 4em;
+  border-bottom: 0.1q outset var(--accent);
 
   position: sticky;
   top: 0;
   z-index: 1000; /* Optional: make sure it stays above other elements */
+}
+
+#themeToggle {
+  font-size: 24px;
+  background: none;
+  border: none;
 }
 
 .menu > div:hover {
@@ -81,7 +87,6 @@ body {
 
 .menu > div {
   display: flex;
-  color: var(--text);
   height: 100%;
   align-items: center;
   flex: 1;
@@ -95,6 +100,7 @@ body {
 
 .menu a {
   text-decoration: none;
+  color: var(--text);
   padding: 0 1em;
 }
 
@@ -106,11 +112,15 @@ body {
   .menu {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .menu.active {
+    transition: max-height 3s ease-in;
     display: flex;
     gap: 1em;
+    min-height: 10em;
   }
 
   .toggle {

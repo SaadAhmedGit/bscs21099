@@ -5,23 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Saad Ahmed Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="bg text">
   <nav class="navbar bg">
-    <div class="logo"></div>
+    <div>
+      <div class="logo"></div>
+      <button id="themeToggle">
+        <i id="icon" class="material-icons text-accent">wb_moon</i>
+      </button>
+    </div>
     <div class="menu">
       <div>
-        <a href="#Experience">Experience</a>
+        <a href="#Experience" data-translate="experience"></a>
       </div>
       <div>
-        <a href="#Projects">Projects</a>
+        <a href="#Projects" data-translate="projects"></a>
       </div>
       <div>
-        <a href="#Achievments">Achievments</a>
+        <a href="#Achievments" data-translate="achievements"></a>
       </div>
       <div>
-        <a href="#Contact">Contact</a>
+        <a href="#Contact" data-translate="contact"></a>
       </div>
     </div>
     <button class="toggle">☰</button>

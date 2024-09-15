@@ -9,6 +9,10 @@ html, body {
   --primary: #7c46be;
   --secondary: #8a479e;
   --accent: #b1819b;
+
+  --font-monospace: 'IBM Plex Mono', Hack, monospace;
+  --font-normal: Arial, sans-serif;
+  --font-heading: 'Open Sans', sans-serif;
 }
 
 :root[data-theme="light"] {
@@ -154,28 +158,17 @@ body {
   display: flex;
   height: 100%;
   width: 100%;
+  max-width: 50%;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* contain: content; */
 }
 
 .roadmap > .leftmap {
-  margin-right: 1em;
-}
-.roadmap > .rightmap {
   margin-left: 1em;
 }
-
-.roadmap > .mapcol > div {
-  height: 100%;
-  width: 100%;
-  padding: 1em;
-  /* min-height: 40em; */
-  margin-top: 1em;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.roadmap > .rightmap {
+  margin-right: 1em;
 }
 
 .roadmap > .mapcol > .empty {
@@ -205,20 +198,96 @@ body {
   border-radius: 50%;
 }
 
-/* .divider-1 { */
-/*   left: calc(33.33% - 5px); /* Adjust based on grid gap */ */
-/* } */
+.section {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 1em;
+  /* contain: content; */
+  margin-top: 1em;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-/* .divider-2 { */
-/*   left: calc(66.66% - 5px); /* Adjust based on grid gap */ */
-/* } */
+  /* animation */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
-.Picture {
-  grid-area: Picture;
+.section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
-.Intro {
-  grid-area: Intro;
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1em;
 }
-.Projects {
-  grid-area: Projects;
+
+#intro-aligner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+}
+
+
+#intro-heading {
+  font-size: 3em;
+  font-weight: 100;
+  color: var(--primary);
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
+#intro-aligner > p {
+  font-size: 1.2em;
+  font-weight: 100;
+  color: var(--text);
+  text-align: center;
+  font-family: var(--font-normal);
+}
+
+#saad {
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  width: 256px;
+  height: 256px;
+}
+
+#social {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.github {
+  background-color: #333;
 }

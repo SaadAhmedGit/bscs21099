@@ -64,41 +64,50 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  width: full;
+  width: 100%;
   height: 100%;
   overflow:hidden;
   min-height: 4em;
-  border-bottom: 0.1q outset var(--accent);
+  border-bottom: 1px solid var(--text);
+  background-color: var(--background);
 
   position: sticky;
   top: 0;
-  z-index: 1000; /* Optional: make sure it stays above other elements */
+  z-index: 1000;
 }
 
-#themeToggle {
+.menu-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.themeToggle {
   font-size: 24px;
+  color: var(--text);
   background: none;
   border: none;
 }
 
-.menu > div:hover {
+.nav-menu > div:hover {
   height: inherit;
 }
 
-.menu > div {
+.nav-menu > div {
   display: flex;
   height: 100%;
   align-items: center;
   flex: 1;
 }
-.menu {
+.nav-menu {
   display: flex;
   height: 100%;
   flex-direction: row;
   padding: 0;
 }
 
-.menu a {
+.nav-menu a {
   text-decoration: none;
   color: var(--text);
   padding: 0 1em;
@@ -109,14 +118,14 @@ body {
 }
 
 @media (max-width: 768px) {
-  .menu {
+  .nav-menu {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .menu.active {
+  .nav-menu.active {
     transition: max-height 3s ease-in;
     display: flex;
     gap: 1em;

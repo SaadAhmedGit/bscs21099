@@ -1,8 +1,8 @@
 document.querySelector('.toggle').addEventListener('click', () => {
-  document.querySelector('.menu').classList.toggle('active');
+  document.querySelector('.nav-menu').classList.toggle('active');
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', _ => {
   const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateIcon(savedTheme);
@@ -14,7 +14,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
   updateIcon(newTheme);
 });
 
-document.getElementById('themeToggle').addEventListener('click', () => {
+document.querySelector('.themeToggle').addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme');
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', newTheme);

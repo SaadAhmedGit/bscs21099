@@ -146,6 +146,11 @@ body {
   }
 }
 
+#stupid-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .roadmap {
   display: flex; 
   position: relative;
@@ -196,6 +201,8 @@ body {
   max-width: 100%;
   min-height: 80vh;
   padding-top: 4em;
+  padding-right: 3em;
+  padding-left: 3em;
   /* contain: content; */
   margin-top: 1em;
   

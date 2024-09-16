@@ -1,6 +1,8 @@
 html, body {
-    overscroll-behavior: none;
-    /* overflow-x: hidden; */
+  overscroll-behavior: none;
+  height: 100%;
+  margin: 0;
+  /* overflow-x: hidden; */
 }
 
 :root {
@@ -69,7 +71,7 @@ body {
   align-items: center;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 7%;
   overflow:hidden;
   min-height: 4em;
   border-bottom: 1px solid var(--text);
@@ -146,15 +148,14 @@ body {
 
 .roadmap {
   display: flex; 
+  position: relative;
   flex-direction: row;
-  place-items: center;
-  height: 300vh;
-  width: 100wh;
-  padding: 0em;
+  align-items: stretch;
+  width: 100%;
   gap: 1em 2em; 
 }
 
-.roadmap > .mapcol {
+.mapcol {
   display: flex;
   height: 100%;
   width: 100%;
@@ -164,17 +165,18 @@ body {
   /* contain: content; */
 }
 
-.roadmap > .leftmap {
+.leftmap {
   margin-left: 1em;
 }
-.roadmap > .rightmap {
+.rightmap {
   margin-right: 1em;
 }
 
-.roadmap > .mapcol > .empty {
+.empty {
   height: 100%;
   width: 100%;
-  padding: 1em;
+  margin-top: 3em;
+  min-height: 60vh;
   
   display: flex;
   justify-content: center;
@@ -184,31 +186,22 @@ body {
 
 .divider {
   border-left: 2px solid var(--accent);
-  position: relative;
-  height: 100%;
-  top: 0;
-}
-
-.roadmap .marker {
-  position: absolute;
-  left: -10px;
-  background-color: var(--primary);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  /* width: 2px; */
+  height: auto;
 }
 
 .section {
   height: 100%;
   width: 100%;
   max-width: 100%;
-  padding: 1em;
+  min-height: 80vh;
+  padding-top: 4em;
   /* contain: content; */
   margin-top: 1em;
   
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 
   /* animation */
   opacity: 0;
@@ -242,7 +235,7 @@ body {
 }
 
 
-#intro-heading {
+.section-heading {
   font-size: 3em;
   font-weight: 100;
   color: var(--primary);
@@ -290,4 +283,21 @@ body {
 
 .github {
   background-color: #333;
+}
+
+.xp-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0em;
+  align-items: start;
+  justify-content: start;
+}
+
+#xp-title {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 1em;
+  color: var(--text-accent);
+  text-align: start;
+  font-family: var(--font-normal);
 }

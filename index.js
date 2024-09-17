@@ -96,24 +96,29 @@ Bonjour, je m'appelle Saad
 `,
   }
 };
-
-  function translatePage() {
-    const targetLang = localStorage.getItem('preferredLang') || 'en';
-    document.querySelectorAll('[data-translate]').forEach(el => {
-      const key = el.getAttribute('data-translate');
-      el.textContent = translations[targetLang][key] || translations['en'][key];
-    });
-  }
-
+document.getElementById('language-select').addEventListener('change', function() {
+  localStorage.setItem('preferredLang', this.value);
   translatePage();
+});
+function translatePage() {
+  const targetLang = localStorage.getItem('preferredLang') || 'en';
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    const key = el.getAttribute('data-translate');
+    el.textContent = translations[targetLang][key] || translations['en'][key];
+  });
+}
+
+translatePage();
 
 const animateSections = () => {
   document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
+          setTimeout(()=> {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }, 300)
         }
       });
     });

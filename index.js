@@ -47,7 +47,17 @@ This is what keeps me going.
     greeting:
     `
 Hi, I'm Saad
-`
+`,
+    coderatic_description: "an online code judge", 
+    packet_disorder_proxy_description: "an educational tool to disrupt order of packet flow",
+
+    experience: "Experience", 
+    insivalley: "SRE and Backend Developer at",
+    fastai: "Open-source Contributor at",
+    submitty: "Open-source Contributor at",
+    ta: "Teaching Assistant for Data Structures & Algorithms at ITU",
+
+    about: "About",
   },
   fr: {
     experience: "Expérience",
@@ -63,7 +73,18 @@ Avec une expérience concrète de la création et de la maintenance d'un produit
     greeting:
     `
 Bonjour, je m'appelle Saad
-`
+`,
+
+    coderatic_description: "un juge de code en ligne", 
+    packet_disorder_proxy_description: "un outil éducatif pour perturber l'ordre du flux de paquets",
+
+    experience: "Expérience", 
+    insivalley: "SRE et Développeur Backend chez",
+    fastai: "Contributeur open-source chez",
+    submitty: "Contributeur open-source chez",
+    ta: "Assistant d'enseignement pour Structures de Données et Algorithmes à l'ITU",
+
+    about: "À propos"
   },
   ar: {
     experience: "الخبرة",
@@ -78,7 +99,18 @@ Bonjour, je m'appelle Saad
     greeting:
     `
 مرحبا، أنا سعد
-`
+`,
+
+    coderatic_description: "قاضي كود عبر الإنترنت", 
+    packet_disorder_proxy_description: "أداة تعليمية لتعطيل ترتيب تدفق الحزم",
+
+    experience: "الخبرة", 
+    insivalley: "مهندس موثوقية الموقع ومطور خلفي في",
+    fastai: "مساهم في المصادر المفتوحة في",
+    submitty: "مساهم في المصادر المفتوحة في",
+    ta: "مساعد تدريس لهياكل البيانات والخوارزميات في ITU",
+
+    about: "حول"
   },
   ur: {
     experience: "تجربہ",
@@ -94,6 +126,17 @@ Bonjour, je m'appelle Saad
     `
 ہیلو، میں سعد ہوں
 `,
+
+coderatic_description: "ایک آن لائن کوڈ جج", 
+packet_disorder_proxy_description: "پیکٹ کے بہاؤ کی ترتیب کو درہم برہم کرنے کا تعلیمی ٹول",
+
+experience: "تجربہ", 
+insivalley: "SRE اور بیک اینڈ ڈیولپر at",
+fastai: "اوپن سورس کنٹریبیوٹر at",
+submitty: "اوپن سورس کنٹریبیوٹر at",
+ta: "ITU میں ڈیٹا سٹرکچرز اور الگورتھم کے لیے تدریسی معاون",
+
+about: "کے بارے میں",
   }
 };
 document.getElementById('language-select').addEventListener('change', function() {
